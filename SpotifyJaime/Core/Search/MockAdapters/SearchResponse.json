@@ -1,0 +1,328 @@
+{
+    "albums": {
+        "href": "https://api.spotify.com/v1/search?query=Muse&type=album&market=US&offset=0&limit=4",
+        "items": [
+                  {
+                  "album_type": "album",
+                  "artists": [
+                              {
+                              "external_urls": {
+                              "spotify": "https://open.spotify.com/artist/12Chz98pHFMPJEknJQMWvI"
+                              },
+                              "href": "https://api.spotify.com/v1/artists/12Chz98pHFMPJEknJQMWvI",
+                              "id": "12Chz98pHFMPJEknJQMWvI",
+                              "name": "Muse",
+                              "type": "artist",
+                              "uri": "spotify:artist:12Chz98pHFMPJEknJQMWvI"
+                              }
+                              ],
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/album/0lw68yx3MhKflWFqCsGkIs"
+                  },
+                  "href": "https://api.spotify.com/v1/albums/0lw68yx3MhKflWFqCsGkIs",
+                  "id": "0lw68yx3MhKflWFqCsGkIs",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/9e5288926fadb82f873ccf2b45300c3a6f65fa14",
+                             "width": 640
+                             },
+                             {
+                             "height": 300,
+                             "url": "https://i.scdn.co/image/f1cad0d6974d6236abd07a59106e8450d85cae24",
+                             "width": 300
+                             },
+                             {
+                             "height": 64,
+                             "url": "https://i.scdn.co/image/81a3f82578dc938c53efdcb405f6a3d3ebbf009f",
+                             "width": 64
+                             }
+                             ],
+                  "name": "Black Holes And Revelations",
+                  "release_date": "2006-06-19",
+                  "release_date_precision": "day",
+                  "type": "album",
+                  "uri": "spotify:album:0lw68yx3MhKflWFqCsGkIs"
+                  },
+                  {
+                  "album_type": "album",
+                  "artists": [
+                              {
+                              "external_urls": {
+                              "spotify": "https://open.spotify.com/artist/12Chz98pHFMPJEknJQMWvI"
+                              },
+                              "href": "https://api.spotify.com/v1/artists/12Chz98pHFMPJEknJQMWvI",
+                              "id": "12Chz98pHFMPJEknJQMWvI",
+                              "name": "Muse",
+                              "type": "artist",
+                              "uri": "spotify:artist:12Chz98pHFMPJEknJQMWvI"
+                              }
+                              ],
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/album/0eFHYz8NmK75zSplL5qlfM"
+                  },
+                  "href": "https://api.spotify.com/v1/albums/0eFHYz8NmK75zSplL5qlfM",
+                  "id": "0eFHYz8NmK75zSplL5qlfM",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/6e1be3ceda70250c701caee5a16bef205e94bc98",
+                             "width": 640
+                             },
+                             {
+                             "height": 300,
+                             "url": "https://i.scdn.co/image/28752dcf4b27ba14c1fc62f04ff469aa53c113d7",
+                             "width": 300
+                             },
+                             {
+                             "height": 64,
+                             "url": "https://i.scdn.co/image/26098aaa50a3450f0bac8f1a7d7677accf3f3cb6",
+                             "width": 64
+                             }
+                             ],
+                  "name": "The Resistance",
+                  "release_date": "2009-09-10",
+                  "release_date_precision": "day",
+                  "type": "album",
+                  "uri": "spotify:album:0eFHYz8NmK75zSplL5qlfM"
+                  },
+                  {
+                  "album_type": "album",
+                  "artists": [
+                              {
+                              "external_urls": {
+                              "spotify": "https://open.spotify.com/artist/6FxuPrpa8phaP3Xn73emhT"
+                              },
+                              "href": "https://api.spotify.com/v1/artists/6FxuPrpa8phaP3Xn73emhT",
+                              "id": "6FxuPrpa8phaP3Xn73emhT",
+                              "name": "The Wood Brothers",
+                              "type": "artist",
+                              "uri": "spotify:artist:6FxuPrpa8phaP3Xn73emhT"
+                              }
+                              ],
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/album/2xkAdEXW7nGQAJMptaOk2d"
+                  },
+                  "href": "https://api.spotify.com/v1/albums/2xkAdEXW7nGQAJMptaOk2d",
+                  "id": "2xkAdEXW7nGQAJMptaOk2d",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/afe446daa20f89d46cf63b5d5c43c2227104f216",
+                             "width": 640
+                             },
+                             {
+                             "height": 300,
+                             "url": "https://i.scdn.co/image/2a19e9365f480f60243a7bb603b977adea4eb423",
+                             "width": 300
+                             },
+                             {
+                             "height": 64,
+                             "url": "https://i.scdn.co/image/63099a2357dfa3d7057d20b4fcc910f71d8254da",
+                             "width": 64
+                             }
+                             ],
+                  "name": "The Muse",
+                  "release_date": "2013",
+                  "release_date_precision": "year",
+                  "type": "album",
+                  "uri": "spotify:album:2xkAdEXW7nGQAJMptaOk2d"
+                  },
+                  {
+                  "album_type": "album",
+                  "artists": [
+                              {
+                              "external_urls": {
+                              "spotify": "https://open.spotify.com/artist/12Chz98pHFMPJEknJQMWvI"
+                              },
+                              "href": "https://api.spotify.com/v1/artists/12Chz98pHFMPJEknJQMWvI",
+                              "id": "12Chz98pHFMPJEknJQMWvI",
+                              "name": "Muse",
+                              "type": "artist",
+                              "uri": "spotify:artist:12Chz98pHFMPJEknJQMWvI"
+                              }
+                              ],
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/album/3KuXEGcqLcnEYWnn3OEGy0"
+                  },
+                  "href": "https://api.spotify.com/v1/albums/3KuXEGcqLcnEYWnn3OEGy0",
+                  "id": "3KuXEGcqLcnEYWnn3OEGy0",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/59fbbabeecaade686c44c99e5d1102130556bba1",
+                             "width": 640
+                             },
+                             {
+                             "height": 300,
+                             "url": "https://i.scdn.co/image/ca0f14d8190f1cfc7183884a65af00ccd3e2301e",
+                             "width": 300
+                             },
+                             {
+                             "height": 64,
+                             "url": "https://i.scdn.co/image/44b74728e87b87c44f91f505758cad882573d7ea",
+                             "width": 64
+                             }
+                             ],
+                  "name": "The 2nd Law",
+                  "release_date": "2012-09-24",
+                  "release_date_precision": "day",
+                  "type": "album",
+                  "uri": "spotify:album:3KuXEGcqLcnEYWnn3OEGy0"
+                  }
+                  ],
+        "limit": 4,
+        "next": "https://api.spotify.com/v1/search?query=Muse&type=album&market=US&offset=4&limit=4",
+        "offset": 0,
+        "previous": null,
+        "total": 1157
+    },
+    "artists": {
+        "href": "https://api.spotify.com/v1/search?query=Muse&type=artist&market=US&offset=0&limit=4",
+        "items": [
+                  {
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/12Chz98pHFMPJEknJQMWvI"
+                  },
+                  "followers": {
+                  "href": null,
+                  "total": 3935484
+                  },
+                  "genres": [
+                             "modern rock",
+                             "permanent wave",
+                             "piano rock",
+                             "post-grunge",
+                             "rock"
+                             ],
+                  "href": "https://api.spotify.com/v1/artists/12Chz98pHFMPJEknJQMWvI",
+                  "id": "12Chz98pHFMPJEknJQMWvI",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/19ac88c7aec1f68aa6e207aff29efa15d37336a7",
+                             "width": 640
+                             },
+                             {
+                             "height": 320,
+                             "url": "https://i.scdn.co/image/7ad2128db73a2814a1a96498404a5d9aabb4c15c",
+                             "width": 320
+                             },
+                             {
+                             "height": 160,
+                             "url": "https://i.scdn.co/image/f026a6204c28907e43e833eaa1820f9b674295ca",
+                             "width": 160
+                             }
+                             ],
+                  "name": "Muse",
+                  "popularity": 73,
+                  "type": "artist",
+                  "uri": "spotify:artist:12Chz98pHFMPJEknJQMWvI"
+                  },
+                  {
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0LjVOGAofVR8GpUkRODKhA"
+                  },
+                  "followers": {
+                  "href": null,
+                  "total": 496
+                  },
+                  "genres": [],
+                  "href": "https://api.spotify.com/v1/artists/0LjVOGAofVR8GpUkRODKhA",
+                  "id": "0LjVOGAofVR8GpUkRODKhA",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/c9f74f62a3ac2a96c8d133a91d0877d3b338ce46",
+                             "width": 640
+                             },
+                             {
+                             "height": 300,
+                             "url": "https://i.scdn.co/image/8f08322b64ae497ff8394e670f5d4da5305e62c0",
+                             "width": 300
+                             },
+                             {
+                             "height": 64,
+                             "url": "https://i.scdn.co/image/67b8562e31f199204757e51867bdda6de153fec6",
+                             "width": 64
+                             }
+                             ],
+                  "name": "Sky Muse",
+                  "popularity": 30,
+                  "type": "artist",
+                  "uri": "spotify:artist:0LjVOGAofVR8GpUkRODKhA"
+                  },
+                  {
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/6dauOpCe6nbJap574c28ss"
+                  },
+                  "followers": {
+                  "href": null,
+                  "total": 715
+                  },
+                  "genres": [],
+                  "href": "https://api.spotify.com/v1/artists/6dauOpCe6nbJap574c28ss",
+                  "id": "6dauOpCe6nbJap574c28ss",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/6a34d321acd68e8fbf3b18a327df099355d1637a",
+                             "width": 640
+                             },
+                             {
+                             "height": 320,
+                             "url": "https://i.scdn.co/image/b0bae59f33c8561c26620621e3e3cf4da94c8ff2",
+                             "width": 320
+                             },
+                             {
+                             "height": 160,
+                             "url": "https://i.scdn.co/image/45d7f99651183c2761caf84b0c44f9093adb5010",
+                             "width": 160
+                             }
+                             ],
+                  "name": "Kenif Muse",
+                  "popularity": 20,
+                  "type": "artist",
+                  "uri": "spotify:artist:6dauOpCe6nbJap574c28ss"
+                  },
+                  {
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2nYRDHDPqrclxCKNOCFY2j"
+                  },
+                  "followers": {
+                  "href": null,
+                  "total": 300
+                  },
+                  "genres": [],
+                  "href": "https://api.spotify.com/v1/artists/2nYRDHDPqrclxCKNOCFY2j",
+                  "id": "2nYRDHDPqrclxCKNOCFY2j",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/1b3a43654bc8a13725ca86be9401e3e32294765f",
+                             "width": 640
+                             },
+                             {
+                             "height": 320,
+                             "url": "https://i.scdn.co/image/ab03145541a21f272179328f124f6b3cc5f75fcd",
+                             "width": 320
+                             },
+                             {
+                             "height": 160,
+                             "url": "https://i.scdn.co/image/04e282c917882d2b83ab7f98bead10d6c76cb3f4",
+                             "width": 160
+                             }
+                             ],
+                  "name": "Pixy Muse",
+                  "popularity": 15,
+                  "type": "artist",
+                  "uri": "spotify:artist:2nYRDHDPqrclxCKNOCFY2j"
+                  }
+                  ],
+        "limit": 4,
+        "next": "https://api.spotify.com/v1/search?query=Muse&type=artist&market=US&offset=4&limit=4",
+        "offset": 0,
+        "previous": null,
+        "total": 208
+    }
+}

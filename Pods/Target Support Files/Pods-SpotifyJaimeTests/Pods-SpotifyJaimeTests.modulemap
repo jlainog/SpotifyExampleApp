@@ -1,0 +1,6 @@
+framework module Pods_SpotifyJaimeTests {
+  umbrella header "Pods-SpotifyJaimeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

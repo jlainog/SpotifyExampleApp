@@ -1,0 +1,84 @@
+{
+    "artists": {
+        "href": "https://api.spotify.com/v1/search?query=Muse&type=artist&market=US&offset=0&limit=2",
+        "items": [
+                  {
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/12Chz98pHFMPJEknJQMWvI"
+                  },
+                  "followers": {
+                  "href": null,
+                  "total": 3957603
+                  },
+                  "genres": [
+                             "modern rock",
+                             "permanent wave",
+                             "piano rock",
+                             "post-grunge",
+                             "rock"
+                             ],
+                  "href": "https://api.spotify.com/v1/artists/12Chz98pHFMPJEknJQMWvI",
+                  "id": "12Chz98pHFMPJEknJQMWvI",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/19ac88c7aec1f68aa6e207aff29efa15d37336a7",
+                             "width": 640
+                             },
+                             {
+                             "height": 320,
+                             "url": "https://i.scdn.co/image/7ad2128db73a2814a1a96498404a5d9aabb4c15c",
+                             "width": 320
+                             },
+                             {
+                             "height": 160,
+                             "url": "https://i.scdn.co/image/f026a6204c28907e43e833eaa1820f9b674295ca",
+                             "width": 160
+                             }
+                             ],
+                  "name": "Muse",
+                  "popularity": 74,
+                  "type": "artist",
+                  "uri": "spotify:artist:12Chz98pHFMPJEknJQMWvI"
+                  },
+                  {
+                  "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0LjVOGAofVR8GpUkRODKhA"
+                  },
+                  "followers": {
+                  "href": null,
+                  "total": 415
+                  },
+                  "genres": [],
+                  "href": "https://api.spotify.com/v1/artists/0LjVOGAofVR8GpUkRODKhA",
+                  "id": "0LjVOGAofVR8GpUkRODKhA",
+                  "images": [
+                             {
+                             "height": 640,
+                             "url": "https://i.scdn.co/image/c9f74f62a3ac2a96c8d133a91d0877d3b338ce46",
+                             "width": 640
+                             },
+                             {
+                             "height": 300,
+                             "url": "https://i.scdn.co/image/8f08322b64ae497ff8394e670f5d4da5305e62c0",
+                             "width": 300
+                             },
+                             {
+                             "height": 64,
+                             "url": "https://i.scdn.co/image/67b8562e31f199204757e51867bdda6de153fec6",
+                             "width": 64
+                             }
+                             ],
+                  "name": "Sky Muse",
+                  "popularity": 30,
+                  "type": "artist",
+                  "uri": "spotify:artist:0LjVOGAofVR8GpUkRODKhA"
+                  }
+                  ],
+        "limit": 2,
+        "next": "https://api.spotify.com/v1/search?query=Muse&type=artist&market=US&offset=2&limit=2",
+        "offset": 0,
+        "previous": null,
+        "total": 208
+    }
+}

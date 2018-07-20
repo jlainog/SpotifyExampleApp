@@ -1,0 +1,241 @@
+
+{
+    "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/albums?offset=0&limit=2&include_groups=album,single,compilation,appears_on",
+    "items": [
+              {
+              "album_group": "album",
+              "album_type": "album",
+              "artists": [
+                          {
+                          "external_urls": {
+                          "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+                          },
+                          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+                          "id": "0TnOYISbd1XYRBk9myaseg",
+                          "name": "Pitbull",
+                          "type": "artist",
+                          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+                          },
+                          {
+                          "external_urls": {
+                          "spotify": "https://open.spotify.com/artist/0WV4LwQrK3769HtNnYW83Q"
+                          },
+                          "href": "https://api.spotify.com/v1/artists/0WV4LwQrK3769HtNnYW83Q",
+                          "id": "0WV4LwQrK3769HtNnYW83Q",
+                          "name": "Jorge Gomez",
+                          "type": "artist",
+                          "uri": "spotify:artist:0WV4LwQrK3769HtNnYW83Q"
+                          }
+                          ],
+              "available_markets": [
+                                    "AD",
+                                    "AR",
+                                    "AT",
+                                    "AU",
+                                    "BE",
+                                    "BG",
+                                    "BO",
+                                    "BR",
+                                    "CA",
+                                    "CH",
+                                    "CL",
+                                    "CO",
+                                    "CR",
+                                    "CY",
+                                    "CZ",
+                                    "DE",
+                                    "DK",
+                                    "DO",
+                                    "EC",
+                                    "EE",
+                                    "ES",
+                                    "FI",
+                                    "FR",
+                                    "GB",
+                                    "GR",
+                                    "GT",
+                                    "HK",
+                                    "HN",
+                                    "HU",
+                                    "ID",
+                                    "IE",
+                                    "IL",
+                                    "IS",
+                                    "IT",
+                                    "JP",
+                                    "LI",
+                                    "LT",
+                                    "LU",
+                                    "LV",
+                                    "MC",
+                                    "MT",
+                                    "MX",
+                                    "MY",
+                                    "NI",
+                                    "NL",
+                                    "NO",
+                                    "NZ",
+                                    "PA",
+                                    "PE",
+                                    "PH",
+                                    "PL",
+                                    "PT",
+                                    "PY",
+                                    "RO",
+                                    "SE",
+                                    "SG",
+                                    "SK",
+                                    "SV",
+                                    "TH",
+                                    "TR",
+                                    "TW",
+                                    "US",
+                                    "UY",
+                                    "VN",
+                                    "ZA"
+                                    ],
+              "external_urls": {
+              "spotify": "https://open.spotify.com/album/6ZSNnOY2ESMNoVQ5DdvHrj"
+              },
+              "href": "https://api.spotify.com/v1/albums/6ZSNnOY2ESMNoVQ5DdvHrj",
+              "id": "6ZSNnOY2ESMNoVQ5DdvHrj",
+              "images": [
+                         {
+                         "height": 640,
+                         "url": "https://i.scdn.co/image/8544de8a2b35dc3a96b80df492919314ba1a9e30",
+                         "width": 640
+                         },
+                         {
+                         "height": 300,
+                         "url": "https://i.scdn.co/image/99852cefaee13f83012ad8a533ff765bd2d99b3b",
+                         "width": 300
+                         },
+                         {
+                         "height": 64,
+                         "url": "https://i.scdn.co/image/770cf84db11a2160c55dfae1304abcd7b99f6c9c",
+                         "width": 64
+                         }
+                         ],
+              "name": "Gotti (Original Motion Picture Soundtrack)",
+              "release_date": "2018-06-14",
+              "release_date_precision": "day",
+              "type": "album",
+              "uri": "spotify:album:6ZSNnOY2ESMNoVQ5DdvHrj"
+              },
+              {
+              "album_group": "album",
+              "album_type": "album",
+              "artists": [
+                          {
+                          "external_urls": {
+                          "spotify": "https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg"
+                          },
+                          "href": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+                          "id": "0TnOYISbd1XYRBk9myaseg",
+                          "name": "Pitbull",
+                          "type": "artist",
+                          "uri": "spotify:artist:0TnOYISbd1XYRBk9myaseg"
+                          }
+                          ],
+              "available_markets": [
+                                    "AD",
+                                    "AR",
+                                    "AT",
+                                    "AU",
+                                    "BE",
+                                    "BG",
+                                    "BO",
+                                    "BR",
+                                    "CA",
+                                    "CH",
+                                    "CL",
+                                    "CO",
+                                    "CR",
+                                    "CY",
+                                    "CZ",
+                                    "DE",
+                                    "DK",
+                                    "DO",
+                                    "EC",
+                                    "EE",
+                                    "ES",
+                                    "FI",
+                                    "FR",
+                                    "GB",
+                                    "GR",
+                                    "GT",
+                                    "HK",
+                                    "HN",
+                                    "HU",
+                                    "ID",
+                                    "IE",
+                                    "IL",
+                                    "IS",
+                                    "IT",
+                                    "JP",
+                                    "LI",
+                                    "LT",
+                                    "LU",
+                                    "LV",
+                                    "MC",
+                                    "MT",
+                                    "MX",
+                                    "MY",
+                                    "NI",
+                                    "NL",
+                                    "NO",
+                                    "NZ",
+                                    "PA",
+                                    "PE",
+                                    "PH",
+                                    "PL",
+                                    "PT",
+                                    "PY",
+                                    "RO",
+                                    "SE",
+                                    "SG",
+                                    "SK",
+                                    "SV",
+                                    "TH",
+                                    "TR",
+                                    "TW",
+                                    "US",
+                                    "UY",
+                                    "VN",
+                                    "ZA"
+                                    ],
+              "external_urls": {
+              "spotify": "https://open.spotify.com/album/4jtKPpBQ5eneMwEI94f5Y0"
+              },
+              "href": "https://api.spotify.com/v1/albums/4jtKPpBQ5eneMwEI94f5Y0",
+              "id": "4jtKPpBQ5eneMwEI94f5Y0",
+              "images": [
+                         {
+                         "height": 640,
+                         "url": "https://i.scdn.co/image/e1ca3a27d6b2d897ec72425c95685f0475c35be3",
+                         "width": 640
+                         },
+                         {
+                         "height": 300,
+                         "url": "https://i.scdn.co/image/374ac74a71e3766cf0dcdf7d11081ad3de91aa99",
+                         "width": 300
+                         },
+                         {
+                         "height": 64,
+                         "url": "https://i.scdn.co/image/9c6311737e16d1ea56029a1a04a1a7816b6ba997",
+                         "width": 64
+                         }
+                         ],
+              "name": "Climate Change",
+              "release_date": "2017-03-17",
+              "release_date_precision": "day",
+              "type": "album",
+              "uri": "spotify:album:4jtKPpBQ5eneMwEI94f5Y0"
+              }
+              ],
+    "limit": 2,
+    "next": "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/albums?offset=2&limit=2&include_groups=album,single,compilation,appears_on",
+    "offset": 0,
+    "previous": null,
+    "total": 527
+}
