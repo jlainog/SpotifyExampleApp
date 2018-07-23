@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     private let albumCellHeight : CGFloat = 200.0
     private let headerHeight : CGFloat = 60.0
     private let isNOTFreshInstallKey = "isFreshInstallKey"
-    fileprivate let controller = SearchController(service: SearchWebService())
+    fileprivate let controller = SearchController(service: ServiceFactory.searchService())
     fileprivate var searchBarController: SearchBarController!
     fileprivate var activityIndicatorView: NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60),
                                                                                              type: .lineScalePulseOut,

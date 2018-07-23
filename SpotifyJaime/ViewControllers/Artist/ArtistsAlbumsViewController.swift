@@ -10,7 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 
 class ArtistsAlbumsViewController: UIViewController {
-    fileprivate let controller = ArtistAlbumsController(service: ArtistWebService())
+    fileprivate let controller = ArtistAlbumsController(service: ServiceFactory.artistAlbumsService())
     fileprivate var endlessScrollHandler: EndlessScrollHandler!
     fileprivate var activityIndicatorView: NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60),
                                                                                              type: .lineScalePulseOut,

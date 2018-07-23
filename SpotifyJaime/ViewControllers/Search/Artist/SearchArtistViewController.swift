@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 import AlertOnboarding
 
 final class SearchArtistViewController: UIViewController {
-    fileprivate let controller = SearchArtistController(service: ArtistWebService())
+    fileprivate let controller = SearchArtistController(service: ServiceFactory.artistService())
     fileprivate var searchBarController: SearchBarController!
     fileprivate var endlessScrollHandler: EndlessScrollHandler!
     fileprivate var activityIndicatorView: NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60),

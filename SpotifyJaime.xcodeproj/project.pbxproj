@@ -23,6 +23,7 @@
 		027EAFD020F937C4001CEA7C /* AccessTokenHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027EAFCF20F937C4001CEA7C /* AccessTokenHandler.swift */; };
 		027EAFD220F93E8F001CEA7C /* MockAccessTokenHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027EAFD120F93E8F001CEA7C /* MockAccessTokenHandler.swift */; };
 		027EAFD520F93ECF001CEA7C /* AccessTokenServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027EAFD420F93ECF001CEA7C /* AccessTokenServiceTest.swift */; };
+		02B2CB2D2104F24A00B6430D /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B2CB2C2104F24A00B6430D /* ServiceFactory.swift */; };
 		02E070E921000D61004EC211 /* UIView+FillSuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E070E821000D61004EC211 /* UIView+FillSuperView.swift */; };
 		02E070EC21023084004EC211 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E070EB21023084004EC211 /* AlbumViewModel.swift */; };
 		02E070EE210230E3004EC211 /* AlbumViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E070ED210230E3004EC211 /* AlbumViewModelTest.swift */; };
@@ -115,6 +116,7 @@
 		027EAFCF20F937C4001CEA7C /* AccessTokenHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenHandler.swift; sourceTree = "<group>"; };
 		027EAFD120F93E8F001CEA7C /* MockAccessTokenHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAccessTokenHandler.swift; sourceTree = "<group>"; };
 		027EAFD420F93ECF001CEA7C /* AccessTokenServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenServiceTest.swift; sourceTree = "<group>"; };
+		02B2CB2C2104F24A00B6430D /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		02E070E821000D61004EC211 /* UIView+FillSuperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FillSuperView.swift"; sourceTree = "<group>"; };
 		02E070EB21023084004EC211 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		02E070ED210230E3004EC211 /* AlbumViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModelTest.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				027EAFC920F9361F001CEA7C /* ServiceError.swift */,
 				02F6FE1320FBC07C0059885D /* Result.swift */,
 				02F6FE1120FA43B30059885D /* SpotifyAPI.swift */,
+				02B2CB2C2104F24A00B6430D /* ServiceFactory.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 				02F6FE3820FD38710059885D /* Albums.swift in Sources */,
 				02F6FE1220FA43B30059885D /* SpotifyAPI.swift in Sources */,
 				02F6FE2C20FCEA760059885D /* Artist.swift in Sources */,
+				02B2CB2D2104F24A00B6430D /* ServiceFactory.swift in Sources */,
 				0250878020F94E4600A74848 /* SpotifyAccessTokenService.swift in Sources */,
 				02FCFD1120FF824C004C1611 /* ArtistAlbumsController.swift in Sources */,
 				02FCFD1320FF8522004C1611 /* AlbumCollectionViewCell.swift in Sources */,

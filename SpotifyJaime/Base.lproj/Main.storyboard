@@ -62,6 +62,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na0-V9-7aO">
                                                     <rect key="frame" x="152" y="26" width="215" height="23"/>
+                                                    <accessibility key="accessibilityConfiguration" label="artist.title"/>
                                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -124,6 +125,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muse" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-aL-d53">
                                                     <rect key="frame" x="8" y="85" width="359" height="21"/>
+                                                    <accessibility key="accessibilityConfiguration" label="album.title"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="CbE-D7-T4q"/>
                                                     </constraints>
@@ -215,6 +217,9 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muse" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dz-MY-9Hi">
                                                     <rect key="frame" x="8" y="147" width="124" height="21"/>
+                                                    <accessibility key="accessibilityConfiguration" label="album.title">
+                                                        <accessibilityTraits key="traits" staticText="YES"/>
+                                                    </accessibility>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="o0I-uO-eqG"/>
                                                     </constraints>
@@ -331,6 +336,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-vO-8oy">
                                 <rect key="frame" x="92" y="36" width="267" height="68"/>
+                                <accessibility key="accessibilityConfiguration" label="artist.title.detail"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -350,6 +356,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOf-LA-hu2">
                                 <rect key="frame" x="16" y="404" width="343" height="73"/>
+                                <accessibility key="accessibilityConfiguration" label="open.external"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="Bhw-rI-hkL"/>
                                 </constraints>
@@ -363,6 +370,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isy-Ew-a9S">
                                 <rect key="frame" x="16" y="320" width="343" height="53"/>
+                                <accessibility key="accessibilityConfiguration" label="album.title"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="vNu-lN-xkv"/>
                                 </constraints>
