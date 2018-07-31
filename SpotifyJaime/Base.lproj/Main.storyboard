@@ -181,9 +181,39 @@
                     <navigationItem key="navigationItem" id="ofh-xt-WS5"/>
                     <connections>
                         <outlet property="collectionView" destination="pfG-Hy-cc8" id="0TC-vw-Gd4"/>
+                        <outlet property="noResultsView" destination="y9S-OY-5pU" id="T7R-vW-1ta"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmu-dj-oS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="y9S-OY-5pU" userLabel="NoResultsView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyGlass" translatesAutoresizingMaskIntoConstraints="NO" id="dx0-rL-Dpm">
+                            <rect key="frame" x="0.0" y="8" width="240" height="68"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="68" id="nel-9c-Fe0"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="340-kc-ZxK">
+                            <rect key="frame" x="0.0" y="84" width="240" height="44"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="gQY-0r-iin" firstAttribute="trailing" secondItem="dx0-rL-Dpm" secondAttribute="trailing" id="36d-ka-1yE"/>
+                        <constraint firstItem="gQY-0r-iin" firstAttribute="bottom" secondItem="340-kc-ZxK" secondAttribute="bottom" id="HeY-3X-YbU"/>
+                        <constraint firstItem="340-kc-ZxK" firstAttribute="trailing" secondItem="gQY-0r-iin" secondAttribute="trailing" id="VaV-v6-x0Y"/>
+                        <constraint firstItem="dx0-rL-Dpm" firstAttribute="leading" secondItem="gQY-0r-iin" secondAttribute="leading" id="fLr-DR-4wK"/>
+                        <constraint firstItem="340-kc-ZxK" firstAttribute="top" secondItem="dx0-rL-Dpm" secondAttribute="bottom" constant="8" id="myY-0q-HUm"/>
+                        <constraint firstItem="dx0-rL-Dpm" firstAttribute="top" secondItem="gQY-0r-iin" secondAttribute="top" constant="8" id="tnM-Cg-yxu"/>
+                        <constraint firstItem="340-kc-ZxK" firstAttribute="leading" secondItem="gQY-0r-iin" secondAttribute="leading" id="uzK-xe-syp"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="gQY-0r-iin"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-284" y="258.62068965517244"/>
         </scene>
@@ -527,4 +557,7 @@
             <point key="canvasLocation" x="396" y="904"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="magnifyGlass" width="600" height="598"/>
+    </resources>
 </document>

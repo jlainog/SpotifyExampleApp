@@ -32,8 +32,15 @@ struct SearchWebService : SearchService {
                         dataRequest.responseJSON { (response) in
                             if (self.concurrentRequest.value!.request != dataRequest.request) { return }
                             
-                            let result = SpotifyAPI.handleResponse(response)
+                            var result = SpotifyAPI.handleResponse(response)
                                 .flatMap { SpotifyAPI.parse($0) as Result<SearchList> }
+                            
+                            switch result {
+                            case Result.Success(var value):
+                                value.query = query
+                                result = .Success(value)
+                            default: break
+                            }
                             
                             DispatchQueue.main.async {
                                 handler(result)

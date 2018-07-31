@@ -29,6 +29,7 @@ class SearchServiceTest: XCTestCase {
             let list = try! result.resolve()
             
             waitForRequest.fulfill()
+            XCTAssertEqual(list.query, "searchTerm")
             XCTAssert(list.artists.items.count == 4)
             XCTAssert(list.albums?.items.count == 4)
         }

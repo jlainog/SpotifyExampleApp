@@ -8,12 +8,50 @@
 
 import UIKit
 
+class Throttler {
+    private let queue: DispatchQueue = DispatchQueue.global(qos: .background)
+    private var workItem : DispatchWorkItem = DispatchWorkItem(block: {})
+    private var lastRun : Date = Date.distantPast
+    private var interval : TimeInterval = 4
+    
+    init(seconds: Int) {
+        self.interval = TimeInterval(seconds)
+    }
+    
+    func cancel() {
+        workItem.cancel()
+    }
+    
+    func thottle(block: @escaping () -> Void) {
+        workItem.cancel()
+        workItem = DispatchWorkItem(block: { [weak self] in
+            self?.lastRun = Date()
+            block()
+        })
+        
+        let delay : Double = secondsSinceLastRun() > interval ? 0 : interval
+        queue.asyncAfter(deadline: .now() + delay) { [weak self] in
+            guard let item = self?.workItem else { return }
+            DispatchQueue.main.async(execute: item)
+        }
+    }
+    
+    private func secondsSinceLastRun() -> Double {
+        let now = Date()
+        
+        return now.timeIntervalSince(lastRun).rounded()
+    }
+}
+
 class SearchBarController : NSObject, UISearchBarDelegate {
     let searchController = CustomUISearchController(searchResultsController: nil)
     var searchBar : UISearchBar { return searchController.searchBar }
     var onDidClickSearchButton : ((String) -> Void)? = nil
     var onTextDidChange : ((String) -> Void)? = nil
+    var onTextDidClear : (() -> Void)? = nil
     private weak var root : UIViewController?
+    private let throttler = Throttler(seconds: 2)
+    private let minCharactersToSearch = 2
     
     init(_ root: UIViewController, placeHolder: String) {
         self.root = root
@@ -43,10 +81,16 @@ class SearchBarController : NSObject, UISearchBarDelegate {
         searchBar.text = cleanText.replacingOccurrences(of: "null", with: "")
         
         guard let searchTerm = searchBar.text?.lowercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines),
-            !searchTerm.isEmpty else {
+            !searchTerm.isEmpty,
+            searchTerm.count > minCharactersToSearch else {
+                throttler.cancel()
+                onTextDidClear?()
                 return
         }
-        onTextDidChange?(searchTerm)
+        
+        throttler.thottle { [weak self] in
+            self?.onTextDidChange?(searchTerm)
+        }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

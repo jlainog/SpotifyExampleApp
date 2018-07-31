@@ -41,8 +41,19 @@ class SearchController {
         self.searchService = service
     }
     
+    func clearSearch() {
+        query = ""
+        errorMessage = nil
+        sections.removeAll()
+        retrevingResults = false
+        showNotFoundResults = false
+    }
+    
     func search(byQuery query: String) {
+        if query.isEmpty { return }
+        
         self.query = query
+        retrevingResults = true
         searchService.search(query) { (result) in
             result
                 .error { self.handleError($0 as! ServiceError) }
@@ -51,12 +62,20 @@ class SearchController {
     }
     
     private func handleError(_ error: ServiceError) {
+        if query.isEmpty { return }
+        
+        retrevingResults = false
         showNotFoundResults = (sections.count == 0)
         self.errorMessage = error.localizedDescription
         delegate?.didFail()
     }
     
     private func handleList(_ list: SearchList) {
+        guard let resultQuery = list.query,
+            resultQuery == query else {
+                return
+        }
+        
         let artistImages = list.artists.items.map { (item) -> ImageViewModel in
             let image = item.images.sorted { (lhs, rhs) -> Bool in
                 return lhs.width < rhs.width
@@ -87,6 +106,7 @@ class SearchController {
             sections.append(artist)
         }
 
+        retrevingResults = false
         showNotFoundResults = (sections.count == 0)
         delegate?.didLoadResults()
     }

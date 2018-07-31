@@ -15,21 +15,33 @@ struct MockSearchService : SearchService {
         case noInternetConnection
     }
     let testOption : TestOptions
+    let delay : Int
     
-    init(testOption: TestOptions) {
+    init(testOption: TestOptions, delay: Int = 0) {
         self.testOption = testOption
+        self.delay = delay
     }
     
     func search(_ query: String, handler: @escaping (Result<SearchList>) -> Void) {
-        handler(Result {
-            switch testOption {
-            case .success(let list):
-                return list
-            case .failure(let error):
-                throw ServiceError.failure(error)
-            case .noInternetConnection:
-                throw ServiceError.noInternetConnection
-            }
-        })
+        let block = {
+            handler(Result {
+                switch self.testOption {
+                case .success(var list):
+                    list.query = query
+                    return list
+                case .failure(let error):
+                    throw ServiceError.failure(error)
+                case .noInternetConnection:
+                    throw ServiceError.noInternetConnection
+                }
+            })
+        }
+        
+        if delay == 0 {
+            block()
+            return
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay), execute: block)
     }
 }

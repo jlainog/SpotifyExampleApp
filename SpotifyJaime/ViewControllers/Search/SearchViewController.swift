@@ -16,20 +16,25 @@ class SearchViewController: UIViewController {
     private let isNOTFreshInstallKey = "isFreshInstallKey"
     fileprivate let controller = SearchController(service: ServiceFactory.searchService())
     fileprivate var searchBarController: SearchBarController!
-    fileprivate var activityIndicatorView: NVActivityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60),
-                                                                                             type: .lineScalePulseOut,
-                                                                                             color: UIColor.green)
+    fileprivate var activityIndicatorView: NVActivityIndicatorView!
+    @IBOutlet fileprivate var noResultsView: UIView!
     @IBOutlet weak var collectionView : UICollectionView!
 
     override func viewDidLoad() {
         searchBarController = SearchBarController(self, placeHolder: "Search Artist")
+        searchBarController.onTextDidClear = { [weak self] in
+            self?.clearSearch()
+        }
         searchBarController.onDidClickSearchButton = { [weak self] in
-            self?.showActivityIndicator()
-            self?.controller.search(byQuery: $0)
+            self?.search($0)
+        }
+        searchBarController.onTextDidChange = { [weak self] in
+            self?.search($0)
         }
         controller.delegate = self
         collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "header")
         showTutorial()
+        configureActivityIndicator()
     }
     
 }
@@ -135,13 +140,20 @@ extension SearchViewController : UICollectionViewDelegate {
 
 extension SearchViewController: SearchControllerDelegate {
     private func checkForUnSatisfiedSearch() {
-        if controller.sections.count == 0 {
-            let message = "Your Search : \"" + controller.query + "\" has no results"
-            let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: false, completion: nil)
+        if !controller.showNotFoundResults {
+            noResultsView.removeFromSuperview()
+            return
         }
+
+        let label = noResultsView.subviews.first { $0.isKind(of: UILabel.self) } as! UILabel
+        let message = "Your Search : \"" + controller.query + "\" has no results"
+        
+        label.text = message
+        noResultsView.clipsToBounds = true
+        noResultsView.layer.cornerRadius = 10
+        noResultsView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        noResultsView.center = view.center
+        view.addSubview(noResultsView)
     }
     
     private func resetCollectionIfNeeded() {
@@ -149,8 +161,6 @@ extension SearchViewController: SearchControllerDelegate {
     }
     
     func didLoadResults() {
-        if controller.retrevingResults == true { return }
-        
         resetCollectionIfNeeded()
         checkForUnSatisfiedSearch()
         collectionView.reloadData()
@@ -158,8 +168,6 @@ extension SearchViewController: SearchControllerDelegate {
     }
     
     func didFail() {
-        if controller.retrevingResults == true { return }
-        
         hideActivityIndicator()
         
         guard let message = controller.errorMessage else { return }
@@ -241,13 +249,37 @@ private extension SearchViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     func showActivityIndicator() {
-        activityIndicatorView.center = view.center
-        view.addSubview(activityIndicatorView)
+        noResultsView.removeFromSuperview()
         activityIndicatorView.startAnimating()
-        collectionView.isHidden = true
     }
     func hideActivityIndicator() {
         collectionView.isHidden = false
         activityIndicatorView.stopAnimating()
+    }
+    func configureActivityIndicator() {
+        let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        
+        activityIndicatorView = NVActivityIndicatorView(frame: frame,
+                                                        type: .lineScalePulseOut,
+                                                        color: UIColor.green)
+        activityIndicatorView.padding = 10
+        activityIndicatorView.clipsToBounds = true
+        activityIndicatorView.layer.cornerRadius = 10
+        activityIndicatorView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        activityIndicatorView.center = view.center
+        view.addSubview(activityIndicatorView)
+        activityIndicatorView.stopAnimating()
+    }
+    func search(_ query: String) {
+        if query == controller.query { return }
+        
+        showActivityIndicator()
+        controller.search(byQuery: query)
+    }
+    func clearSearch() {
+        hideActivityIndicator()
+        controller.clearSearch()
+        collectionView.reloadData()
+        noResultsView.removeFromSuperview()
     }
 }

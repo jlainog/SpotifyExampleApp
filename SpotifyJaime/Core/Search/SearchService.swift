@@ -9,6 +9,7 @@
 import Foundation
 
 struct SearchList: Codable {
+    var query : String?
     let artists : ArtistList
     let albums : AlbumsList?
 }

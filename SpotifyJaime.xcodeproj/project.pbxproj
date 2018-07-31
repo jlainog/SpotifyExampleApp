@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021E7FAC21109DC30053605F /* ServiceFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E7FAB21109DC30053605F /* ServiceFactoryTest.swift */; };
 		0250877D20F9495600A74848 /* AccessTokenHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250877C20F9495600A74848 /* AccessTokenHandlerTest.swift */; };
 		0250878020F94E4600A74848 /* SpotifyAccessTokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250877F20F94E4600A74848 /* SpotifyAccessTokenService.swift */; };
 		0250878220F94E6200A74848 /* SpotifyAccessTokenHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250878120F94E6200A74848 /* SpotifyAccessTokenHandler.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021E7FAB21109DC30053605F /* ServiceFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactoryTest.swift; sourceTree = "<group>"; };
 		0250877C20F9495600A74848 /* AccessTokenHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenHandlerTest.swift; sourceTree = "<group>"; };
 		0250877F20F94E4600A74848 /* SpotifyAccessTokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAccessTokenService.swift; sourceTree = "<group>"; };
 		0250878120F94E6200A74848 /* SpotifyAccessTokenHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAccessTokenHandler.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				02F6FE2520FCE7FE0059885D /* AccessToken */,
 				02F6FE1520FC48110059885D /* ResultTest.swift */,
 				02F6FE1C20FCDE580059885D /* SpotifyApiTest.swift */,
+				021E7FAB21109DC30053605F /* ServiceFactoryTest.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				02E070EE210230E3004EC211 /* AlbumViewModelTest.swift in Sources */,
 				02FCFD3620FFACD8004C1611 /* SearchWebServiceTest.swift in Sources */,
 				02F6FE1D20FCDE580059885D /* SpotifyApiTest.swift in Sources */,
+				021E7FAC21109DC30053605F /* ServiceFactoryTest.swift in Sources */,
 				02F6FE3120FCFF740059885D /* ArtistWebServiceTest.swift in Sources */,
 				02FCFD1F20FF9D47004C1611 /* ImageViewModelTest.swift in Sources */,
 				02FCFD3220FFAAE1004C1611 /* SearchControllerTest.swift in Sources */,

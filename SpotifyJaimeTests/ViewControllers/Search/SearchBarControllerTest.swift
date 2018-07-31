@@ -33,6 +33,32 @@ class SearchBarControllerTest: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
+    func testSearchBarController_onTextDidChange() {
+        let waitForRequest = expectation(description: "testSearchBarController_didClickSearchButton")
+
+        sut.onTextDidChange = { query in
+            XCTAssertEqual(query, "MyQuery".lowercased())
+            waitForRequest.fulfill()
+        }
+        
+        sut.searchBar.text = "MyQuery"
+        sut.searchBar(sut.searchBar, textDidChange: sut.searchBar.text!)
+        waitForExpectations(timeout: 2, handler: nil)
+    }
+    
+    func testSearchBarController_onTextDidClear() {
+        let waitForRequest = expectation(description: "testSearchBarController_didClickSearchButton")
+        
+        sut.onTextDidClear = {
+            XCTAssertEqual(self.sut.searchController.searchBar.placeholder, "placeHolder")
+            waitForRequest.fulfill()
+        }
+        
+        sut.searchBar.text = "MyQuery"
+        sut.searchBar(sut.searchBar, textDidChange: "")
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
     func testSearchBarController_removeSpecialCharacters() {
         sut.searchBar.text = "MyQuery\"\\“\\’\\‘\\`\\”\\“\\„»«\'"
         sut.searchBar(sut.searchBar, textDidChange: sut.searchBar.text!)

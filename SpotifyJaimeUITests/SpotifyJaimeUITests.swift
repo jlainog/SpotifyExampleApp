@@ -49,7 +49,7 @@ class SpotifyJaimeUITests: XCTestCase {
     func testSearch_Failure() {
         let app = launchApp(["--MockSearchService-Failure"])
         
-        search("Muse", app: app)
+        search("M", app: app)
         let exists = app.alerts.staticTexts["Mock Failure"].exists
         XCTAssertTrue(exists)
     }
@@ -57,7 +57,7 @@ class SpotifyJaimeUITests: XCTestCase {
     func testSearch_NoInternet() {
         let app = launchApp(["--MockSearchService-NoInternet"])
         
-        search("Muse", app: app)
+        search("M", app: app)
         let exists = app.alerts.staticTexts["No Internet Connection"].exists
         XCTAssertTrue(exists)
     }

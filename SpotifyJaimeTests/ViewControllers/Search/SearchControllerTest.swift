@@ -34,6 +34,16 @@ class SearchControllerTest: XCTestCase {
         list = searchList
     }
     
+    func testSearchSections() {
+        let albumSection = SearchSections.albums(list.albums!.items, [])
+        let artistSection = SearchSections.artist(list.artists.items, [])
+        let topArtistSection = SearchSections.topArtist(list.artists.items.first!, ImageViewModel(imageURL: nil))
+        
+        XCTAssertEqual(albumSection.count(), list.albums!.items.count)
+        XCTAssertEqual(artistSection.count(), list.albums!.items.count)
+        XCTAssertEqual(topArtistSection.count(), 1)
+    }
+    
     func testSearch_Success() {
         let waitForRequest = expectation(description: "testSearch_Success")
         let service = MockSearchService(testOption: .success(list))
@@ -50,6 +60,45 @@ class SearchControllerTest: XCTestCase {
             XCTAssert(controller.showNotFoundResults == false)
         }
         waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func testSearch_SuccessOneReturnOnMultipleCalls() {
+        let delay = 1
+        let waitForRequest = expectation(description: "testSearch_Success")
+        let service = MockSearchService(testOption: .success(list), delay: delay)
+        let controller = SearchController(service: service)
+        let delegate = MockSearchControllerDelegate()
+        
+        controller.delegate = delegate
+        controller.search(byQuery: "mock")
+        controller.search(byQuery: "mock1")
+        controller.search(byQuery: "mock2")
+        XCTAssertFalse(delegate.didCallFailLoad)
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay)) {
+            waitForRequest.fulfill()
+            XCTAssertEqual(controller.query, "mock2")
+            XCTAssertTrue(delegate.didCallResultsLoad)
+            XCTAssertFalse(controller.retrevingResults)
+            XCTAssertFalse(controller.showNotFoundResults)
+        }
+        waitForExpectations(timeout: 4, handler: nil)
+    }
+    
+    func testSearch_Cancel() {
+        let service = MockSearchService(testOption: .success(list))
+        let controller = SearchController(service: service)
+        let delegate = MockSearchControllerDelegate()
+        
+        controller.delegate = delegate
+        controller.search(byQuery: "mock")
+        XCTAssertTrue(delegate.didCallResultsLoad)
+        XCTAssertFalse(delegate.didCallFailLoad)
+        controller.clearSearch()
+        XCTAssertEqual(controller.query, "")
+        XCTAssertNil(controller.errorMessage)
+        XCTAssertFalse(controller.retrevingResults)
+        XCTAssertFalse(controller.showNotFoundResults)
+        XCTAssertEqual(controller.sections.count, 0)
     }
      
     func testSearch_Failure() {
